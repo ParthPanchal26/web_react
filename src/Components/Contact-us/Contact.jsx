@@ -1,4 +1,30 @@
+import { useState } from "react";
+
 export default function Contact() {
+
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        tel: '',
+    })
+
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+        setFormData({
+          ...formData,
+          [name]: value
+        });
+      };
+
+    const handleForm = (event) => {
+        event.preventDefault();
+        setFormData({
+            name: '',
+            email: '',
+            tel: ''
+        });
+    }
+
     return (
         <div className="relative flex items-top justify-center min-h-[400px] bg-white sm:items-center sm:pt-0">
             <div className="max-w-6xl mx-auto sm:px-6 lg:px-8">
@@ -85,7 +111,7 @@ export default function Contact() {
                             </div>
                         </div>
 
-                        <form className="p-6 flex flex-col justify-center">
+                        <form className="p-6 flex flex-col justify-center" onSubmit={handleForm}>
                             <div className="flex flex-col">
                                 <label htmlFor="name" className="hidden">
                                     Name
@@ -94,6 +120,8 @@ export default function Contact() {
                                     type="name"
                                     name="name"
                                     id="name"
+                                    value={formData.name}
+                                    onChange={handleChange}
                                     placeholder="FirstName LastName"
                                     className="w-100 mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 text-gray-800 font-semibold focus:border-orange-500 focus:outline-none"
                                 />
@@ -107,6 +135,8 @@ export default function Contact() {
                                     type="email"
                                     name="email"
                                     id="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
                                     placeholder="Your Email"
                                     className="w-100 mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 text-gray-800 font-semibold focus:border-orange-500 focus:outline-none"
                                 />
@@ -120,6 +150,8 @@ export default function Contact() {
                                     type="tel"
                                     name="tel"
                                     id="tel"
+                                    value={formData.tel}
+                                    onChange={handleChange}
                                     placeholder="Contact Number"
                                     className="w-100 mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 text-gray-800 font-semibold focus:border-orange-500 focus:outline-none"
                                 />
