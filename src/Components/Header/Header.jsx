@@ -64,7 +64,7 @@ export default function Header() {
               </li>
               <li>
                 <NavLink
-                to="/web_react/User/:id"
+                to="/web_react/user/:id"
                   className={({isActive}) =>
                     ` ${isActive ? "text-orange-700" : "text-gray-700"} hover:animate-ping block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
                   }
@@ -74,7 +74,7 @@ export default function Header() {
               </li>
               <li>
                 <NavLink
-                to="/web_react/Github"
+                to="/web_react/github"
                   className={({isActive}) =>
                     ` ${isActive ? "text-orange-700" : "text-gray-700"} block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
                   }
