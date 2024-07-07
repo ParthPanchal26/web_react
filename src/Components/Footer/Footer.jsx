@@ -26,17 +26,17 @@ export default function Footer() {
                                     </Link>
                                 </li>
                                 <li className='mt-1'>
-                                    <Link to="/web_react/contact" className="hover:underline">
+                                    <Link to="/web_react/Contact" className="hover:underline">
                                         Contact us
                                     </Link>
                                 </li>
                                 <li className='mt-1'>
-                                    <Link to="/web_react/about" className="hover:underline">
+                                    <Link to="/web_react/About" className="hover:underline">
                                         About
                                     </Link>
                                 </li>
                                 <li className='mt-1'>
-                                    <Link to="/web_react/github" className="hover:underline">
+                                    <Link to="/web_react/Github" className="hover:underline">
                                         GitHub
                                     </Link>
                                 </li>
